@@ -29,8 +29,8 @@ CREATE TABLE `schema_migrations` (
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `todos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `description` text,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -59,5 +59,6 @@ CREATE TABLE `todos` (
 
 LOCK TABLES `schema_migrations` WRITE;
 INSERT INTO `schema_migrations` (version) VALUES
-  ('20231122033351');
+  ('20231122033351'),
+  ('20231122111719');
 UNLOCK TABLES;
