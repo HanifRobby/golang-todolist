@@ -17,8 +17,8 @@ var db *gorm.DB = config.ConnectDB()
 
 // Todo struct for request body
 type todoRequest struct {
-	Name        string `json:"name"`
-	Description string `json:"description"`
+	Name        string `json:"Name"`
+	Description string `json:"Description"`
 }
 
 // Defining struct for response
